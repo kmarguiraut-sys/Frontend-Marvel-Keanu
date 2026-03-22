@@ -1,6 +1,6 @@
 import "./header.css";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/marvel-Studios-Logo-2002.png";
+import Logo from "../../assets/Marvel-Studios-Logo-2002.png";
 
 const Header = ({ isConnected, handleToken }) => {
   return (
