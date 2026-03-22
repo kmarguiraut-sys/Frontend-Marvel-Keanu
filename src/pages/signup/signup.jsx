@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import "./Signup.css";
+import "./signup.css";
 
 const Signup = ({ setIsConnected }) => {
   const navigate = useNavigate();
