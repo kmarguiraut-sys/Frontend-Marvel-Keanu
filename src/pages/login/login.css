@@ -1,0 +1,80 @@
+.container:has(> form input[type="email"]) {
+  padding-top: 36px;
+  padding-bottom: 48px;
+}
+
+.container:has(> form input[type="email"]) > h1 {
+  font-size: clamp(30px, 3.8vw, 46px);
+  margin-bottom: 20px;
+}
+
+.container > form:has(input[type="email"]) {
+  max-width: 520px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: var(--shadow);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container > form:has(input[type="email"]) input {
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 0 12px;
+  outline: none;
+}
+
+.container > form:has(input[type="email"]) input::placeholder {
+  color: var(--text-muted);
+}
+
+.container > form:has(input[type="email"]) input:focus {
+  border-color: rgba(237, 29, 36, 0.9);
+  box-shadow: 0 0 0 4px rgba(237, 29, 36, 0.18);
+}
+
+.container > form:has(input[type="email"]) button {
+  margin-top: 4px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    var(--accent-soft) 100%
+  );
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.container > form:has(input[type="email"]) button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(237, 29, 36, 0.25);
+}
+
+.container > a[href="/signup"] {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.error {
+  margin-top: 12px;
+  color: #ff8d92;
+}

@@ -1,0 +1,100 @@
+.favorites-page {
+  padding: 28px 0 46px;
+}
+
+.favorites-container {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.favorites-container h1 {
+  font-size: clamp(30px, 3.5vw, 44px);
+  letter-spacing: 0.4px;
+}
+
+.favorites-section {
+  margin-top: 28px;
+}
+
+.favorites-section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.favorites-section > p {
+  color: var(--text-muted);
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-top: 12px;
+}
+
+.favorite-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(237, 29, 36, 0.7);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.favorite-card h3,
+.favorite-card p,
+.favorite-card button {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+.favorite-card h3 {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.favorite-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.favorite-card button {
+  margin-bottom: 14px;
+  width: calc(100% - 28px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 9px 12px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.favorite-card button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(237, 29, 36, 0.65);
+  background: rgba(237, 29, 36, 0.16);
+}

@@ -1,0 +1,13 @@
+.app-footer {
+  margin-top: auto;
+  background: rgba(12, 15, 22, 0.85);
+  color: var(--text-muted);
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  font-family: Inter, "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}

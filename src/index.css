@@ -1,0 +1,54 @@
+:root {
+  --bg: #090b10;
+  --bg-soft: #11151d;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #f4f7ff;
+  --text-muted: #b8bfd3;
+  --accent: #ed1d24;
+  --accent-soft: #ff3f45;
+  --radius: 16px;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    "Roboto Condensed",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%, #182032 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, #1a1225 0%, transparent 35%), var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}

@@ -1,0 +1,166 @@
+.comics-home {
+  padding: 26px 0 48px;
+}
+
+.comics-container {
+  width: min(1240px, calc(100% - 40px));
+}
+
+.comics-status-message {
+  text-align: center;
+  font-size: 17px;
+  color: var(--text-muted);
+  padding: 48px 0;
+}
+
+.comics-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.comic-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(237, 29, 36, 0.72);
+  box-shadow: 0 24px 42px rgba(0, 0, 0, 0.46);
+}
+
+.comic-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.comic-card h2 {
+  margin: 14px 14px 8px;
+  font-size: 21px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.comic-card p {
+  margin: 0 14px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 84px;
+}
+
+.favorite-toggle-btn {
+  margin: auto 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 9px 12px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.favorite-toggle-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(237, 29, 36, 0.65);
+  background: rgba(237, 29, 36, 0.16);
+}
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.pages-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-btn,
+.previous-btn,
+.Next {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.page-btn:hover,
+.previous-btn:hover,
+.Next:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.page-btn.active {
+  border-color: rgba(237, 29, 36, 0.85);
+  background: rgba(237, 29, 36, 0.22);
+}
+
+.page-btn:disabled,
+.previous-btn:disabled,
+.Next:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .comics-list {
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 16px;
+  }
+
+  .comic-card img {
+    height: 240px;
+  }
+
+  .page-btn,
+  .previous-btn,
+  .Next {
+    min-width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+}
