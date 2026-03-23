@@ -47,7 +47,8 @@ const Comics = ({ favoriteComics, toggleComicFavorite }) => {
           setTotalPages(1);
         } else {
           const response = await axios.get(
-            `http://localhost:3000/comics?title=${searchQuery}&page=${currentPage}&limit=${limit}`,
+            `https://site--backend-react-keanu--zwjdy7r2ycpp.code.run/comics?title=${searchQuery}&page=${currentPage}&limit=${limit}`,
+            // `http://localhost:3000/comics?title=${searchQuery}&page=${currentPage}&limit=${limit}`,
           );
 
           setComics(response.data.results);
